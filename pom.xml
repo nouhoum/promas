@@ -8,7 +8,7 @@
   <packaging>pom</packaging>
 
   <name>promas</name>
-
+  <inceptionYear>2013</inceptionYear>
   <properties>
     <junitVersion>4.11</junitVersion>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
