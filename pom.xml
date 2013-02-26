@@ -11,16 +11,29 @@
 	<name>promas</name>
 	<inceptionYear>2013</inceptionYear>
 	<properties>
+		<spring.version>3.2.1.RELEASE</spring.version>
 		<junitVersion>4.11</junitVersion>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 
 	<modules>
+		<module>core</module>
 		<module>web</module>
 	</modules>
-	
+
 	<dependencyManagement>
 		<dependencies>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-context</artifactId>
+				<version>${spring.version}</version>
+				<exclusions>
+					<exclusion>
+						<groupId>commons-logging</groupId>
+						<artifactId>commons-logging</artifactId>
+					</exclusion>
+				</exclusions>
+			</dependency>
 			<dependency>
 				<groupId>junit</groupId>
 				<artifactId>junit</artifactId>
